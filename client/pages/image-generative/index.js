@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FaImage } from "react-icons/fa";
+import { FaDownload, FaImage } from "react-icons/fa";
 import { FiCopy, FiRefreshCcw } from "react-icons/fi";
 
 export default function ImageGenerator() {
@@ -9,6 +9,8 @@ export default function ImageGenerator() {
   const [imageUrl, setImageUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+  console.log(BACKEND_URL);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,7 +25,7 @@ export default function ImageGenerator() {
     setImageUrl("");
 
     try {
-      const res = await fetch("http://localhost:5000/api/generative/image", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/generative/image`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt }),
@@ -123,7 +125,7 @@ export default function ImageGenerator() {
                   className="text-green-600 hover:text-green-800 flex items-center gap-1 text-sm cursor-pointer"
                   title="Download image"
                 >
-                  ⬇️ Download
+                  <FaDownload /> Download
                 </a>
               </div>
             </div>

@@ -3,9 +3,11 @@ import { FaGithub } from "react-icons/fa";
 import image from "../public/gemini-native-image.png";
 
 export default function Home() {
+  console.log(process.env.Id);
+
   return (
     <main
-      className="relative min-h-screen bg-cover bg-center bg-no-repeat"
+      className="relative min-h-screen bg-cover bg-center bg-no-repeat"  
       style={{ backgroundImage: `url(${image.src})` }}
     >
       {/* Dark Overlay for contrast */}
@@ -18,7 +20,8 @@ export default function Home() {
         </h1>
 
         <p className="text-lg md:text-xl text-gray-200 max-w-2xl mb-10 animate-fade-in delay-100">
-          Experience the power of artificial intelligence that can generate text, images, and more — powered by Google Gemini.
+          Experience the power of artificial intelligence that can generate
+          text, images, and more — powered by Google Gemini.
         </p>
 
         <div className="flex flex-wrap gap-4 justify-center animate-fade-in delay-200">

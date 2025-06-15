@@ -42,7 +42,7 @@ export const imageGenerative = async (req, res) => {
       } else if (part.inlineData) {
         const imageData = part.inlineData.data;
         const buffer = Buffer.from(imageData, "base64");
-        fs.writeFileSync("gemini-native-image.png", buffer);
+        // fs.writeFileSync("gemini-native-image.png", buffer);
         console.log("Image saved as gemini-native-image.png");
         res.json({
           image: buffer.toString("base64"),
