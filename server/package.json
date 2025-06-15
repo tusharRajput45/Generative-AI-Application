@@ -1,0 +1,20 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Tushar Rajput",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@google/genai": "^1.5.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.15.2"
+  }
+}
