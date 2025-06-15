@@ -9,8 +9,6 @@ export default function ImageGenerator() {
   const [imageUrl, setImageUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
-  console.log(BACKEND_URL);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

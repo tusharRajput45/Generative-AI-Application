@@ -22,7 +22,7 @@ export default function VideoGenerator() {
     setVideoUrl("");
 
     try {
-      const res = await fetch("/api/generate-video", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/generative/video`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt }),
